@@ -1,0 +1,63 @@
+---
+import { hotelData } from '../data/hotel.js';
+---
+
+<header id="navbar" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5 group">
+      <div class="w-9 h-9 rounded-lg bg-emerald-800 group-hover:bg-emerald-700 text-white flex items-center justify-center font-bold text-sm transition">
+        {hotelData.initials}
+      </div>
+      <div>
+        <span class="font-bold text-slate-900 block leading-none">{hotelData.shortName}</span>
+        <span class="text-[11px] text-emerald-700 font-semibold tracking-wider uppercase">Hotel • SGC</span>
+      </div>
+    </a>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <a href="#acomodacoes" class="hover:text-emerald-800 transition">Acomodações</a>
+      <a href="#estrutura" class="hover:text-emerald-800 transition">Estrutura</a>
+      <a href="#localizacao" class="hover:text-emerald-800 transition">Localização</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a
+        href={`https://wa.me/${hotelData.whatsapp}?text=${encodeURIComponent(`Olá! Gostaria de verificar disponibilidade de quartos no ${hotelData.name}.`)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm"
+      >
+        Reservar
+      </a>
+
+      <!-- Botão Menu Mobile -->
+      <button id="mobile-menu-btn" aria-label="Abrir menu" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Gaveta Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3">
+    <a href="#acomodacoes" class="block text-sm font-medium text-slate-700 hover:text-emerald-700 mobile-link">Acomodações</a>
+    <a href="#estrutura" class="block text-sm font-medium text-slate-700 hover:text-emerald-700 mobile-link">Estrutura</a>
+    <a href="#localizacao" class="block text-sm font-medium text-slate-700 hover:text-emerald-700 mobile-link">Localização</a>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const links = document.querySelectorAll('.mobile-link');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  links.forEach(link => {
+    link.addEventListener('click', () => menu?.classList.add('hidden'));
+  });
+</script>

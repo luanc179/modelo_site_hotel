@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prévia — Altorionegro Hotel | São Gabriel da Cachoeira - AM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-amber-500/30 selection:text-amber-200">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-neutral-950/95 backdrop-blur border-b border-amber-500/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-black border border-amber-500/50 flex items-center justify-center p-1.5">
+          <svg viewBox="0 0 64 64" class="w-full h-full fill-none stroke-amber-400" stroke-width="3.5">
+            <path d="M18 10 L46 10 L54 54 L10 54 Z" />
+            <path d="M36 10 C22 22, 44 30, 26 42 C20 46, 24 51, 28 54" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div>
+          <span class="font-bold text-amber-400 tracking-wider uppercase block leading-none text-sm sm:text-base">
+            Altorionegro
+          </span>
+          <span class="text-[10px] tracking-[0.25em] text-neutral-400 uppercase font-medium">
+            Hotel • SGC
+          </span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-300">
+        <a href="#acomodacoes" class="hover:text-amber-400 transition">Acomodações</a>
+        <a href="#diferenciais" class="hover:text-amber-400 transition">O Hotel</a>
+        <a href="#localizacao" class="hover:text-amber-400 transition">Localização</a>
+        <a href="#faq" class="hover:text-amber-400 transition">Dúvidas</a>
+      </nav>
+
+      <a href="#acomodacoes" class="bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-neutral-950 text-sm font-bold px-4 py-2 rounded-lg transition shadow-md shadow-amber-500/10">
+        Reservar
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative bg-black text-white border-b border-amber-500/20">
+    <div class="absolute inset-0 overflow-hidden">
+      <img
+        src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80"
+        alt="Fachada Altorionegro Hotel"
+        class="w-full h-full object-cover opacity-35"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-black/50"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
+      <div class="max-w-2xl mb-10">
+        <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-300 bg-amber-500/10 border border-amber-400/30 px-3.5 py-1 rounded-full mb-4">
+          Hospedagem • Turismo • Corporativo
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+          Uma nova experiência em <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">São Gabriel da Cachoeira.</span>
+        </h1>
+        <p class="text-neutral-300 text-base sm:text-lg leading-relaxed">
+          Quartos amplos, climatizados e pensados para o seu bem-estar, a poucos passos da praia do Rio Negro. Simule suas diárias e fale direto com nossa recepção.
+        </p>
+      </div>
+
+      <!-- Simulador -->
+      <div class="bg-neutral-900/95 backdrop-blur-md rounded-2xl shadow-2xl p-5 sm:p-6 border border-amber-500/30">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+          <div>
+            <label for="p-checkin" class="block text-xs font-semibold uppercase tracking-wider text-amber-400/90 mb-1.5">Entrada (Check-in)</label>
+            <input type="date" id="p-checkin" class="w-full rounded-lg bg-neutral-950 border border-neutral-700 px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none [color-scheme:dark]" />
+          </div>
+          <div>
+            <label for="p-checkout" class="block text-xs font-semibold uppercase tracking-wider text-amber-400/90 mb-1.5">Saída (Check-out)</label>
+            <input type="date" id="p-checkout" class="w-full rounded-lg bg-neutral-950 border border-neutral-700 px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none [color-scheme:dark]" />
+          </div>
+          <div>
+            <label for="p-room" class="block text-xs font-semibold uppercase tracking-wider text-amber-400/90 mb-1.5">Acomodação</label>
+            <select id="p-room" class="w-full rounded-lg bg-neutral-950 border border-neutral-700 px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+              <option value="single" data-rate="180" data-name="Apartamento Individual (Single)">Apartamento Individual (R$ 180/dia)</option>
+              <option value="casal" data-rate="240" data-name="Apartamento Casal / Duplo">Apartamento Casal / Duplo (R$ 240/dia)</option>
+              <option value="triplo" data-rate="310" data-name="Apartamento Triplo / Equipe">Apartamento Triplo / Equipe (R$ 310/dia)</option>
+            </select>
+          </div>
+          <div>
+            <label for="p-guests" class="block text-xs font-semibold uppercase tracking-wider text-amber-400/90 mb-1.5">Hóspedes</label>
+            <select id="p-guests" class="w-full rounded-lg bg-neutral-950 border border-neutral-700 px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:outline-none">
+              <option>1 Adulto</option>
+              <option>2 Adultos</option>
+              <option>3 Adultos</option>
+              <option>Família / Equipe</option>
+            </select>
+          </div>
+          <div>
+            <button type="button" onclick="alert('Prévia visual: ao publicar, este botão abre o WhatsApp com os dados simulados preenchidos!')" class="w-full bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-neutral-950 font-bold text-sm py-2.5 px-4 rounded-lg transition shadow-md cursor-pointer">
+              Solicitar no WhatsApp
+            </button>
+          </div>
+        </div>
+        <div id="p-est-bar" class="hidden mt-4 pt-3 border-t border-neutral-800 flex flex-wrap items-center justify-between gap-2 text-sm">
+          <span id="p-est-details" class="text-neutral-300"></span>
+          <span id="p-est-total" class="font-bold text-amber-400"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acomodações -->
+  <section id="acomodacoes" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1">Acomodações</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Conforto em cada detalhe</h2>
+      </div>
+      <p class="text-sm text-neutral-400">Clique na foto ou em "Ver Detalhes" para ampliar a galeria.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Single -->
+      <article class="bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-amber-500/40 overflow-hidden shadow-lg transition flex flex-col">
+        <button type="button" onclick="openPreviewModal('single')" class="relative h-56 w-full overflow-hidden group text-left cursor-pointer bg-neutral-950">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="Apartamento Individual" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+          <span class="absolute bottom-3 right-3 bg-black/80 border border-amber-500/30 text-amber-300 text-xs font-medium px-2.5 py-1 rounded-md">Ampliar fotos</span>
+        </button>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Apartamento Individual (Single)</h3>
+            <p class="text-xs text-amber-400 font-medium mb-3">1 Cama Box Solteiro / Viúva • 18 m²</p>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-5">Ambiente silencioso e climatizado com bancada de apoio para notebook, iluminação adequada e Wi-Fi estável.</p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center justify-between gap-2">
+            <button type="button" onclick="openPreviewModal('single')" class="text-xs font-semibold text-neutral-300 hover:text-amber-400 transition cursor-pointer">Ver Detalhes</button>
+            <span class="bg-gradient-to-r from-amber-500 to-yellow-600 text-neutral-950 text-xs font-bold px-3.5 py-2 rounded-lg">Cotar no WhatsApp</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Casal -->
+      <article class="bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-amber-500/40 overflow-hidden shadow-lg transition flex flex-col">
+        <button type="button" onclick="openPreviewModal('casal')" class="relative h-56 w-full overflow-hidden group text-left cursor-pointer bg-neutral-950">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Apartamento Casal" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+          <span class="absolute bottom-3 right-3 bg-black/80 border border-amber-500/30 text-amber-300 text-xs font-medium px-2.5 py-1 rounded-md">Ampliar fotos</span>
+        </button>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Apartamento Casal / Duplo</h3>
+            <p class="text-xs text-amber-400 font-medium mb-3">1 Cama Box Casal ou 2 Solteiro • 22 m²</p>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-5">Quarto amplo com opção de cama de casal ou duas camas separadas, ideal para estadias curtas ou prolongadas.</p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center justify-between gap-2">
+            <button type="button" onclick="openPreviewModal('casal')" class="text-xs font-semibold text-neutral-300 hover:text-amber-400 transition cursor-pointer">Ver Detalhes</button>
+            <span class="bg-gradient-to-r from-amber-500 to-yellow-600 text-neutral-950 text-xs font-bold px-3.5 py-2 rounded-lg">Cotar no WhatsApp</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Triplo -->
+      <article class="bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-amber-500/40 overflow-hidden shadow-lg transition flex flex-col">
+        <button type="button" onclick="openPreviewModal('triplo')" class="relative h-56 w-full overflow-hidden group text-left cursor-pointer bg-neutral-950">
+          <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80" alt="Apartamento Triplo" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+          <span class="absolute bottom-3 right-3 bg-black/80 border border-amber-500/30 text-amber-300 text-xs font-medium px-2.5 py-1 rounded-md">Ampliar fotos</span>
+        </button>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white mb-1">Apartamento Triplo / Equipe</h3>
+            <p class="text-xs text-amber-400 font-medium mb-3">1 Cama Casal + 1 Solteiro • 28 m²</p>
+            <p class="text-sm text-neutral-400 leading-relaxed mb-5">Acomodação espaçosa projetada para receber até três pessoas com conforto, climatização eficiente e praticidade.</p>
+          </div>
+          <div class="pt-4 border-t border-neutral-800 flex items-center justify-between gap-2">
+            <button type="button" onclick="openPreviewModal('triplo')" class="text-xs font-semibold text-neutral-300 hover:text-amber-400 transition cursor-pointer">Ver Detalhes</button>
+            <span class="bg-gradient-to-r from-amber-500 to-yellow-600 text-neutral-950 text-xs font-bold px-3.5 py-2 rounded-lg">Cotar no WhatsApp</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Diferenciais -->
+  <section id="diferenciais" class="bg-neutral-900/60 border-y border-neutral-800/80 py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="p-5 rounded-xl bg-neutral-900 border border-neutral-800">
+        <h3 class="font-bold text-amber-400 mb-1">A Passos do Rio Negro</h3>
+        <p class="text-sm text-neutral-400">Localização privilegiada próxima à praia do Rio Negro e ao centro comercial.</p>
+      </div>
+      <div class="p-5 rounded-xl bg-neutral-900 border border-neutral-800">
+        <h3 class="font-bold text-amber-400 mb-1">Climatização & Conforto</h3>
+        <p class="text-sm text-neutral-400">Apartamentos amplos com ar-condicionado e acabamento moderno para descanso pleno.</p>
+      </div>
+      <div class="p-5 rounded-xl bg-neutral-900 border border-neutral-800">
+        <h3 class="font-bold text-amber-400 mb-1">Ideal para Corporativo</h3>
+        <p class="text-sm text-neutral-400">Conectividade e estrutura preparadas para missões, empresas e viagens a trabalho.</p>
+      </div>
+      <div class="p-5 rounded-xl bg-neutral-900 border border-neutral-800">
+        <h3 class="font-bold text-amber-400 mb-1">Atendimento Direto</h3>
+        <p class="text-sm text-neutral-400">Negociação rápida pelo WhatsApp para individuais, famílias ou grupos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização -->
+  <section id="localizacao" class="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1">Localização</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Areia branca e águas negras a poucos passos</h2>
+        <p class="text-neutral-300 text-sm sm:text-base leading-relaxed mb-4">
+          Situado na Av. Sete de Setembro, com fácil acesso à orla do Rio Negro, bancos, restaurantes e principais pontos de apoio de São Gabriel da Cachoeira.
+        </p>
+        <p class="text-sm text-neutral-400 mb-6">
+          <strong class="text-neutral-200">Instagram oficial:</strong> @hotelaltorionegro
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <span class="inline-block bg-gradient-to-r from-amber-500 to-yellow-600 text-neutral-950 font-bold text-sm px-5 py-3 rounded-lg">
+            Pedir Localização no WhatsApp
+          </span>
+          <a href="https://maps.app.goo.gl/Bv4LH7HmDutJioUJ9" target="_blank" rel="noopener noreferrer" class="inline-block border border-neutral-700 hover:border-amber-400/50 text-neutral-200 hover:text-amber-300 font-semibold text-sm px-5 py-3 rounded-lg transition">
+            Abrir no Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-xl h-80 bg-neutral-900">
+        <iframe
+          src="https://maps.google.com/maps?q=-0.135833,-67.083306&t=&z=17&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-neutral-900/50 border-t border-neutral-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <p class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-1">Dúvidas frequentes</p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white">Informações essenciais para sua estadia</h2>
+      </div>
+
+      <div class="space-y-3">
+        <details class="group bg-neutral-900 rounded-xl border border-neutral-800 p-5 open:border-amber-500/40 transition">
+          <summary class="flex items-center justify-between font-semibold text-white cursor-pointer list-none">
+            <span>Quais são os horários de check-in e check-out?</span>
+            <span class="text-amber-400 group-open:rotate-180 transition-transform">⌄</span>
+          </summary>
+          <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
+            O check-in inicia às 14h e o check-out vai até as 12h. Entre em contato pelo WhatsApp para verificar disponibilidade de entrada antecipada ou guarda de bagagem.
+          </p>
+        </details>
+
+        <details class="group bg-neutral-900 rounded-xl border border-neutral-800 p-5 open:border-amber-500/40 transition">
+          <summary class="flex items-center justify-between font-semibold text-white cursor-pointer list-none">
+            <span>Quais formas de pagamento são aceitas e há emissão de nota fiscal?</span>
+            <span class="text-amber-400 group-open:rotate-180 transition-transform">⌄</span>
+          </summary>
+          <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
+            Aceitamos Pix, dinheiro e cartões. Para empresas, órgãos públicos ou prestação de contas, solicite previamente as condições de faturamento e emissão de nota fiscal pelo WhatsApp.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-neutral-500 py-10 border-t border-amber-500/20 text-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-neutral-300 font-semibold">Altorionegro Hotel • São Gabriel da Cachoeira • Amazonas</p>
+      <p class="text-xs">Prévia visual — Preto & Dourado</p>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <span class="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2.5 rounded-full bg-[#25D366] text-white font-bold text-base px-5 py-3.5 shadow-xl cursor-pointer" onclick="alert('Prévia visual do botão flutuante do WhatsApp')">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </span>
+
+  <!-- Modal -->
+  <div id="p-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-sm p-4">
+    <div class="bg-neutral-900 border border-amber-500/30 rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl">
+      <div class="relative h-64 sm:h-80 bg-neutral-950">
+        <img id="p-modal-img" src="" alt="" class="w-full h-full object-cover" />
+        <button onclick="stepPhoto(-1)" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/75 text-amber-400 border border-amber-500/30 cursor-pointer">‹</button>
+        <button onclick="stepPhoto(1)" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/75 text-amber-400 border border-amber-500/30 cursor-pointer">›</button>
+        <span id="p-counter" class="absolute bottom-3 left-3 bg-black/80 text-amber-300 border border-amber-500/30 text-xs px-2.5 py-1 rounded-md">1 / 2</span>
+        <button onclick="closePreviewModal()" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/75 text-white border border-neutral-700 cursor-pointer">✕</button>
+      </div>
+      <div class="p-6">
+        <div class="flex items-center justify-between gap-2 mb-2">
+          <h3 id="p-modal-title" class="text-xl font-bold text-white"></h3>
+          <span id="p-modal-rate" class="text-sm font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full"></span>
+        </div>
+        <p id="p-modal-desc" class="text-neutral-300 text-sm mb-5"></p>
+        <div class="flex justify-end">
+          <button onclick="closePreviewModal()" class="px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-600 text-neutral-950 text-sm font-bold cursor-pointer">Fechar prévia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const previewRooms = {
+      single: {
+        title: 'Apartamento Individual (Single)',
+        rate: 'Ref. R$ 180/diária',
+        desc: 'Ambiente silencioso e climatizado com bancada de apoio para notebook, iluminação adequada e Wi-Fi estável.',
+        photos: [
+          'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
+        ]
+      },
+      casal: {
+        title: 'Apartamento Casal / Duplo',
+        rate: 'Ref. R$ 240/diária',
+        desc: 'Quarto amplo com opção de cama de casal ou duas camas separadas, ideal para estadias curtas ou prolongadas.',
+        photos: [
+          'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80'
+        ]
+      },
+      triplo: {
+        title: 'Apartamento Triplo / Equipe',
+        rate: 'Ref. R$ 310/diária',
+        desc: 'Acomodação espaçosa projetada para receber até três pessoas com conforto, climatização eficiente e praticidade.',
+        photos: [
+          'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80',
+          'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80'
+        ]
+      }
+    };
+
+    let activeKey = 'single';
+    let photoIdx = 0;
+
+    function updateModalImg() {
+      const r = previewRooms[activeKey];
+      document.getElementById('p-modal-img').src = r.photos[photoIdx];
+      document.getElementById('p-counter').textContent = `${photoIdx + 1} / ${r.photos.length}`;
+    }
+
+    function openPreviewModal(key) {
+      activeKey = key;
+      photoIdx = 0;
+      const r = previewRooms[key];
+      document.getElementById('p-modal-title').textContent = r.title;
+      document.getElementById('p-modal-rate').textContent = r.rate;
+      document.getElementById('p-modal-desc').textContent = r.desc;
+      updateModalImg();
+      const m = document.getElementById('p-modal');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+
+    function closePreviewModal() {
+      const m = document.getElementById('p-modal');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    }
+
+    function stepPhoto(delta) {
+      const total = previewRooms[activeKey].photos.length;
+      photoIdx = (photoIdx + delta + total) % total;
+      updateModalImg();
+    }
+
+    const ci = document.getElementById('p-checkin');
+    const co = document.getElementById('p-checkout');
+    const rm = document.getElementById('p-room');
+    function calcP() {
+      if (!ci.value || !co.value) return;
+      const days = Math.round((new Date(co.value + 'T00:00:00') - new Date(ci.value + 'T00:00:00')) / 86400000);
+      const bar = document.getElementById('p-est-bar');
+      bar.classList.remove('hidden');
+      if (days <= 0) {
+        document.getElementById('p-est-details').textContent = 'Escolha uma saída posterior à entrada.';
+        document.getElementById('p-est-total').textContent = '';
+        return;
+      }
+      const opt = rm.options[rm.selectedIndex];
+      const total = days * Number(opt.dataset.rate);
+      document.getElementById('p-est-details').textContent = `${days} diária(s) • ${opt.dataset.name}`;
+      document.getElementById('p-est-total').textContent = `Estimativa: R$ ${total.toLocaleString('pt-BR')},00`;
+    }
+    ci.addEventListener('change', calcP);
+    co.addEventListener('change', calcP);
+    rm.addEventListener('change', calcP);
+  </script>
+</body>
+</html>
